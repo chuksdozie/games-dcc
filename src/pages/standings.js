@@ -162,7 +162,8 @@ export default function Home() {
                 padding: ".2rem",
               }}
             >
-              {scoreline.homeGoals} - {scoreline.awayGoals}
+              {`(${scoreline.homeTeam}) ${scoreline.homeGoals}`} -{" "}
+              {` ${scoreline.awayGoals} (${scoreline.awayTeam})`}
             </p>{" "}
             <p
               style={{
