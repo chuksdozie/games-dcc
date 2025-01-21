@@ -115,7 +115,7 @@ export default function Home() {
         gap: "1rem",
         padding: "2rem 1rem",
         minHeight: "100vh",
-        backgroundColor: colors.black,
+        backgroundColor: colors.gray200,
         // backgroundImage: `url(/bga.png)`,
         backgroundSize: "cover",
       }}
@@ -129,7 +129,7 @@ export default function Home() {
             alignItems: "center",
             justifyContent: "center",
             gap: "1rem",
-            padding: "1rem",
+            padding: ".5rem",
             backgroundColor: colors.white,
             // backgroundImage: `url(/bga.png)`,
             backgroundSize: "cover",
@@ -143,13 +143,36 @@ export default function Home() {
               display: "flex",
               alignItems: "center",
               gap: "1rem",
+              justifyContent: "space-between",
+              // backgroundColor: "red",
+              width: "100%",
+              textAlign: "right",
             }}
           >
-            <p>{scoreline.home}</p>
-            <h2>
+            <p style={{ fontSize: fontSizes.s, width: "120px" }}>
+              {scoreline.home}
+            </p>
+            <p
+              style={{
+                fontSize: fontSizes.s,
+                fontWeight: 700,
+                width: "100%",
+                backgroundColor: colors.gray200,
+                textAlign: "center",
+                padding: ".2rem",
+              }}
+            >
               {scoreline.homeGoals} - {scoreline.awayGoals}
-            </h2>{" "}
-            <p>{scoreline.away}</p>
+            </p>{" "}
+            <p
+              style={{
+                fontSize: fontSizes.s,
+                width: "120px",
+                textAlign: "left",
+              }}
+            >
+              {scoreline.away}
+            </p>
           </span>
         </div>
       ))}
