@@ -34,6 +34,15 @@ export default function Home() {
     dataRef.current.value = "";
   };
 
+  const stickyColumnStyles = {
+    style: {
+      position: "sticky",
+      left: 0, // Adjust the position of the sticky column
+      backgroundColor: "#fff", // Optional: Add a background to the sticky column
+      zIndex: 2, // Ensure it stays above other content
+    },
+  };
+
   const result = calculateLeagueTable(scorelines);
   console.log({ result });
   // const { mutate, isLoading } = useCreateAnonymous();
@@ -44,12 +53,9 @@ export default function Home() {
       name: "Player",
       selector: (row) => row.team,
       sortable: true,
+      ...stickyColumnStyles,
     },
-    {
-      name: "Points",
-      selector: (row) => <h3>{row.points}</h3>,
-      sortable: true,
-    },
+
     {
       name: "MP",
       selector: (row) => row.played,
@@ -83,6 +89,11 @@ export default function Home() {
     {
       name: "GD",
       selector: (row) => row.GD,
+      sortable: true,
+    },
+    {
+      name: "Points",
+      selector: (row) => <h3>{row.points}</h3>,
       sortable: true,
     },
     {
