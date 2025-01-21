@@ -55,8 +55,8 @@ export default function Home() {
       sortable: true,
     },
     {
-      name: "L",
-      selector: (row) => row.losses,
+      name: "W",
+      selector: (row) => row.played - (row.losses + row.draws),
       sortable: true,
     },
     {
@@ -65,10 +65,11 @@ export default function Home() {
       sortable: true,
     },
     {
-      name: "W",
-      selector: (row) => row.played - (row.losses + row.draws),
+      name: "L",
+      selector: (row) => row.losses,
       sortable: true,
     },
+
     {
       name: "GF",
       selector: (row) => row.GF,
@@ -82,6 +83,11 @@ export default function Home() {
     {
       name: "GD",
       selector: (row) => row.GD,
+      sortable: true,
+    },
+    {
+      name: "Last 5",
+      selector: (row) => row.draws,
       sortable: true,
     },
   ];

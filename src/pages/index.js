@@ -19,6 +19,7 @@ import { convertToCustomFormatForDateTime } from "@/utils/dateFunctions";
 import { toast } from "react-toastify";
 import DefaultTable from "@/components/table/DefaultTable";
 import { calculateLeagueTable, scorelines } from "@/utils";
+import { Last5 } from "@/components/minor/Last5";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -82,6 +83,11 @@ export default function Home() {
     {
       name: "GD",
       selector: (row) => row.GD,
+      sortable: true,
+    },
+    {
+      name: "Last 5",
+      selector: (row) => <Last5 data={row.last5} />,
       sortable: true,
     },
   ];

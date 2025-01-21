@@ -17,6 +17,7 @@ export const calculateLeagueTable = (scorelines) => {
         GF: 0,
         GA: 0,
         GD: 0,
+        last5: [], // Track the last 5 match outcomes
       };
     }
 
@@ -28,11 +29,19 @@ export const calculateLeagueTable = (scorelines) => {
     if (result === "win") {
       table[team].points += 3;
       table[team].wins += 1;
+      table[team].last5.push("W");
     } else if (result === "draw") {
       table[team].points += 1;
       table[team].draws += 1;
+      table[team].last5.push("D");
     } else if (result === "loss") {
       table[team].losses += 1;
+      table[team].last5.push("L");
+    }
+
+    // Keep only the last 5 results
+    if (table[team].last5.length > 5) {
+      table[team].last5.shift();
     }
   };
 
