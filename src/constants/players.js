@@ -15,3 +15,10 @@ export const team = {
   presido: "Presido",
   ayo: "Ayo",
 };
+
+export const soccer_team = {
+  manU: "MNU",
+  liverpool: "LIV",
+  manCity: "MCL",
+  england: "ENG",
+};
