@@ -1,6 +1,6 @@
 // next-seo.config.js
 const title = "Games - FC 25";
-const description = "Keeping track of friendly games in a fun way.";
+const description = "Tracking friendly games in a fun and engaging way!";
 
 export default {
   title,
@@ -16,7 +16,7 @@ export default {
         url: "https://keyrounds.tn/_next/image?url=https%3A%2F%2Fmedia.keyrounds.tn%2Fpublic%2Fmedia%2Fgames%2F309bd940-cbd3-444c-ab0a-ac6f9e38528d.webp&w=828&q=100", // Replace with your event's banner image URL
         width: 800,
         height: 800,
-        alt: "Anonymous",
+        alt: "Games - FC 25",
       },
     ],
     site_name: "Games",
