@@ -20,6 +20,8 @@ import { toast } from "react-toastify";
 import DefaultTable from "@/components/table/DefaultTable";
 import { calculateLeagueTable, scorelines } from "@/utils";
 import { Last5 } from "@/components/minor/Last5";
+import MonthFilter from "@/components/popups/MonthFilter";
+import { useSortMatchTable } from "@/hooks/table.hook";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +29,7 @@ export default function Home() {
   const dataRef = useRef();
   const dispatch = useDispatch();
   const [message, setMessage] = useState("");
+  const result = useSortMatchTable();
   const number = useSelector((state) => state?.counter?.value);
   const submithandler = (e) => {
     e.preventDefault();
@@ -43,7 +46,6 @@ export default function Home() {
     },
   };
 
-  const result = calculateLeagueTable(scorelines);
   console.log({ result });
   // const { mutate, isLoading } = useCreateAnonymous();
   // const data = useGetAllAnonymous();
@@ -144,6 +146,7 @@ export default function Home() {
         backgroundSize: "cover",
       }}
     >
+      <MonthFilter data={scorelines} />
       <DefaultTable
         columns={columns}
         data={result}
