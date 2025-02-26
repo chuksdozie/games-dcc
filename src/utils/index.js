@@ -3,7 +3,11 @@ import { addMatchDay } from "./match";
 
 export const scorelines = [...addMatchDay(jan25, 1), ...addMatchDay(feb25, 2)];
 
-export const calculateLeagueTable = (scorelines) => {
+export const calculateLeagueTable = (scorelines, filter) => {
+  const filteredScorelines =
+    filter === 0
+      ? scorelines
+      : scorelines.filter((item) => item.matchDay === filter);
   const table = {};
 
   // Initialize or update team stats
@@ -47,7 +51,7 @@ export const calculateLeagueTable = (scorelines) => {
   };
 
   // Process each scoreline
-  for (const { home, homeGoals, away, awayGoals } of scorelines) {
+  for (const { home, homeGoals, away, awayGoals } of filteredScorelines) {
     if (homeGoals > awayGoals) {
       // Home wins
       updateTeamStats(home, homeGoals, awayGoals, "win");
