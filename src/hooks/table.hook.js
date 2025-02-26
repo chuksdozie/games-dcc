@@ -1,7 +1,6 @@
 import { calculateLeagueTable, scorelines } from "@/utils";
 
-export const useSortMatchTable = () => {
-  const resultdddd = calculateLeagueTable(scorelines);
-  console.log({ resultdddd });
-  return resultdddd;
+export const useSortMatchTable = (filter) => {
+  const output = calculateLeagueTable(scorelines, filter);
+  return output;
 };

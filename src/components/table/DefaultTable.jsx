@@ -1,4 +1,5 @@
 import colors from "@/constants/colors";
+import { useMemo } from "react";
 import DataTable from "react-data-table-component";
 
 // const columns = [
@@ -51,16 +52,19 @@ const customStyles = {
 };
 
 const DefaultTable = (props) => {
-  return (
-    <DataTable
-      columns={props.columns}
-      data={props.data}
-      pagination={props?.pagination}
-      customStyles={customStyles}
-      onRowClicked={props.rowClick}
-      props
-    />
-  );
+  const result = useMemo(() => {
+    return (
+      <DataTable
+        columns={props.columns}
+        data={props.data}
+        pagination={props?.pagination}
+        customStyles={customStyles}
+        onRowClicked={props.rowClick}
+        props
+      />
+    );
+  }, [props]);
+  return result;
 };
 
 export default DefaultTable;
