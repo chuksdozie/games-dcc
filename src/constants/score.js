@@ -200,11 +200,11 @@ export const feb25 = [
 
 export const mar25 = [
   {
-    home: team.ayo,
+    home: team.presido,
     homeGoals: 0,
-    homeTeam: soccer_team.manU,
-    away: team.piso,
-    awayGoals: 2,
-    awayTeam: soccer_team.tottenham,
+    homeTeam: soccer_team.liverpool,
+    away: team.ayo,
+    awayGoals: 7,
+    awayTeam: soccer_team.psg,
   },
 ];
