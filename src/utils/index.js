@@ -1,7 +1,11 @@
-import { feb25, jan25 } from "@/constants/score";
+import { feb25, jan25, mar25 } from "@/constants/score";
 import { addMatchDay } from "./match";
 
-export const scorelines = [...addMatchDay(jan25, 1), ...addMatchDay(feb25, 2)];
+export const scorelines = [
+  ...addMatchDay(jan25, 1),
+  ...addMatchDay(feb25, 2),
+  ...addMatchDay(mar25, 3),
+];
 
 export const calculateLeagueTable = (scorelines, filter) => {
   const filteredScorelines =

@@ -197,3 +197,14 @@ export const feb25 = [
     awayTeam: soccer_team.liverpool,
   },
 ];
+
+export const mar25 = [
+  {
+    home: team.ayo,
+    homeGoals: 0,
+    homeTeam: soccer_team.manU,
+    away: team.piso,
+    awayGoals: 2,
+    awayTeam: soccer_team.tottenham,
+  },
+];

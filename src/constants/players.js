@@ -22,4 +22,6 @@ export const soccer_team = {
   manCity: "MCL",
   england: "ENG",
   tottenham: "TOT",
+  psg: "PSG",
+  bayern: "FCB",
 };
