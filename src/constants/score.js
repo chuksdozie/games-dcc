@@ -215,4 +215,12 @@ export const mar25 = [
     awayGoals: 1,
     awayTeam: soccer_team.bayern,
   },
+  {
+    home: team.piso,
+    homeGoals: 8,
+    homeTeam: soccer_team.tottenham,
+    away: team.ayo,
+    awayGoals: 1,
+    awayTeam: soccer_team.liverpool,
+  },
 ];
