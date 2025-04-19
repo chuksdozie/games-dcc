@@ -24,4 +24,7 @@ export const soccer_team = {
   tottenham: "TOT",
   psg: "PSG",
   bayern: "FCB",
+  france: "FRA",
+  real_madrid: "RMA",
+  barcelona: "BAR",
 };
